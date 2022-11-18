@@ -1,5 +1,5 @@
 import { fileURLToPath, URL } from "node:url";
-import path from 'path'
+import path from "path";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
@@ -9,16 +9,15 @@ import Components from "unplugin-vue-components/vite";
 import AutoImport from "unplugin-auto-import/vite";
 // https://vitejs.dev/config/
 export default defineConfig({
-
   plugins: [
     vue(),
     vueJsx(),
     Pages({
-      extensions: ['vue', 'md'],
+      extensions: ["vue", "md"],
     }),
     Layouts({
-      layoutsDirs: 'src/layouts',
-      defaultLayout: 'HomeLayout'
+      layoutsDirs: "src/layouts",
+      defaultLayout: "HomeLayout",
     }),
     AutoImport({
       imports: [
@@ -28,6 +27,9 @@ export default defineConfig({
         "vue/macros",
         "@vueuse/head",
         "@vueuse/core",
+        {
+          vuetify: ["useTheme"],
+        },
       ],
       dts: "src/auto-imports.d.ts",
       dirs: ["src/composables", "src/store"],
