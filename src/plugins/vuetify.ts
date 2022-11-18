@@ -10,7 +10,7 @@ import "vuetify/styles";
 import "@mdi/font/css/materialdesignicons.css";
 
 // Theme
-const lightTheme: ThemeDefinition = {
+const light: ThemeDefinition = {
   dark: false,
   colors: {
     background: "#efefef",
@@ -26,7 +26,7 @@ const lightTheme: ThemeDefinition = {
   },
 };
 
-const darkTheme: ThemeDefinition = {
+const dark: ThemeDefinition = {
   dark: true,
   colors: {
     background: "#181833",
@@ -46,10 +46,10 @@ const vuetify = createVuetify({
   components,
   directives,
   theme: {
-    defaultTheme: "lightTheme",
+    defaultTheme: "light",
     themes: {
-      lightTheme,
-      darkTheme,
+      light,
+      dark,
     },
   },
 });

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useTheme } from "vuetify";
 
 useHead({
   title: "Home",
@@ -43,20 +42,19 @@ useHead({
 </template>
 <style scoped>
 .hero {
-  max-width: 620px;
+  max-width: 640px;
 }
 .tagline {
-  max-width: 620px;
   font-weight: 900;
   line-height: 1.2;
-  font-size: 2.6rem;
+  font-size: 2.9rem;
   background: linear-gradient(-312deg, #7743db 2%, #b598eb 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .v-theme--light .tagline {
-  color: #3b3486;
+  color: #3b3486 !important;
   background: inherit;
   background-clip: unset;
   -webkit-background-clip: unset;
@@ -70,7 +68,6 @@ useHead({
   -webkit-text-fill-color: transparent;
 }
 .description {
-  max-width: 620px;
   font-weight: 300;
   line-height: 1.5;
 }
