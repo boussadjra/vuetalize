@@ -124,7 +124,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             _push2(ssrRenderComponent(_component_v_container, { class: "h-100 d-flex justify-center" }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(`<div class="d-flex flex-column justify-center align-center h-100 hero" data-v-bd9f7ae0${_scopeId2}><h1 class="tagline" data-v-bd9f7ae0${_scopeId2}> Start your project with <span class="vuetify3" data-v-bd9f7ae0${_scopeId2}>Vuetify 3</span> faster than ever </h1><p class="text-muted py-8 description" data-v-bd9f7ae0${_scopeId2}> This template is opinionated and comes with a lot of features out of the box. It is meant to be a starting point for your project. </p><div class="d-flex justify-start w-100" data-v-bd9f7ae0${_scopeId2}>`);
+                  _push3(`<div class="d-flex flex-column justify-center align-center h-100 hero" data-v-886ec5e5${_scopeId2}><h1 class="tagline" data-v-886ec5e5${_scopeId2}> Start your project with <span class="vuetify3" data-v-886ec5e5${_scopeId2}>Vuetify 3</span> faster than ever </h1><p class="text-muted py-8 description" data-v-886ec5e5${_scopeId2}> This template is opinionated and comes with a lot of features out of the box. It is meant to be a starting point for your project. </p><div class="d-flex justify-start w-100" data-v-886ec5e5${_scopeId2}>`);
                   _push3(ssrRenderComponent(_component_v_btn, {
                     color: "primary",
                     to: "/about",
@@ -249,20 +249,20 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const index_vue_vue_type_style_index_0_scoped_bd9f7ae0_lang = "";
+const index_vue_vue_type_style_index_0_scoped_886ec5e5_lang = "";
 const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("src/pages/index.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const __pages_import_1__ = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-bd9f7ae0"]]);
-const __pages_import_0__ = () => import("./assets/Test.7494a51d.js");
-const __pages_import_2__ = () => import("./assets/About.b5681641.js");
+const __pages_import_1__ = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-886ec5e5"]]);
+const __pages_import_0__ = () => import("./assets/Test.7511869e.js");
+const __pages_import_2__ = () => import("./assets/About.c985e8e9.js");
 const routes$1 = [{ "name": "Test", "path": "/test", "component": __pages_import_0__, "props": true }, { "name": "index", "path": "/", "component": __pages_import_1__, "props": true }, { "name": "About", "path": "/about", "component": __pages_import_2__, "props": true }];
 const main$1 = "";
 const materialdesignicons = "";
-const lightTheme = {
+const light = {
   dark: false,
   colors: {
     background: "#efefef",
@@ -277,7 +277,7 @@ const lightTheme = {
     warning: "#CB8C00"
   }
 };
-const darkTheme = {
+const dark = {
   dark: true,
   colors: {
     background: "#181833",
@@ -296,22 +296,18 @@ const vuetify = createVuetify({
   components,
   directives,
   theme: {
-    defaultTheme: "lightTheme",
+    defaultTheme: "light",
     themes: {
-      lightTheme,
-      darkTheme
+      light,
+      dark
     }
   }
 });
 const main = "";
 const routes = setupLayouts(routes$1);
-console.log("--------------------");
-console.log("generatedRoutes", routes$1);
-console.log("routes", routes);
-console.log("--------------------");
 const createApp = ViteSSG(
   _sfc_main$3,
-  { routes: routes$1, base: "/" },
+  { routes, base: "/" },
   ({ app, router, routes: routes2, isClient, initialState }) => {
     app.use(createPinia());
     app.use(vuetify);
