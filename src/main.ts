@@ -1,12 +1,12 @@
 import { createPinia } from "pinia";
-import { ViteSSG } from "vite-ssg";
 import App from "./App.vue";
-import { createRouter } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import { setupLayouts } from "virtual:generated-layouts";
 import generatedRoutes from "~pages";
 
 import vuetify from "./plugins/vuetify";
 import "./assets/main.css";
+import { createHead } from "@vueuse/head";
 
 const routes = setupLayouts(generatedRoutes);
 console.log("--------------------");
@@ -14,14 +14,14 @@ console.log("generatedRoutes", generatedRoutes);
 console.log("routes", routes);
 
 console.log("--------------------");
-export const createApp = ViteSSG(
-  // the root component
-  App,
-  // vue-router options
-  { routes: generatedRoutes, base: import.meta.env.BASE_URL },
-  // function to have custom setups
-  ({ app, router, routes, isClient, initialState }) => {
-    app.use(createPinia());
-    app.use(vuetify);
-  }
+const app = createApp(App);
+app.use(createPinia());
+app.use(vuetify);
+app.use(createHead());
+app.use(
+  createRouter({
+    history: createWebHistory(import.meta.env.BASE_URL),
+    routes: generatedRoutes,
+  })
 );
+app.mount("#app");
