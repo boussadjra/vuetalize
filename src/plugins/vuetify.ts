@@ -14,7 +14,7 @@ const light: ThemeDefinition = {
   dark: false,
   colors: {
     background: "#efefef",
-    surface: "#FFFFFF",
+    surface: "#fff",
     primary: "#7743DB",
     "primary-darken-1": "#3B3486",
     secondary: "#ef476f",
@@ -30,7 +30,7 @@ const dark: ThemeDefinition = {
   dark: true,
   colors: {
     background: "#181833",
-    surface: "#181833",
+    surface: "#161644",
     primary: "#7743DB",
     "primary-darken-1": "#3B3486",
     secondary: "#ef476f",
@@ -46,7 +46,7 @@ const vuetify = createVuetify({
   components,
   directives,
   theme: {
-    defaultTheme: "light",
+    defaultTheme: "dark",
     themes: {
       light,
       dark,

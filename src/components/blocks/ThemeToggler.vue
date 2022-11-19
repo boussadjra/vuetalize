@@ -8,7 +8,7 @@ function toggleTheme() {
 const isDark = computed(() => theme.global.current.value.dark);
 </script>
 <template>
-  <div class="position-absolute theme-toggler">
+  <div class="theme-toggler">
     <v-btn
       :icon="isDark ? 'mdi-white-balance-sunny' : 'mdi-weather-night'"
       color="secondary"
@@ -21,5 +21,6 @@ const isDark = computed(() => theme.global.current.value.dark);
 .theme-toggler {
   bottom: 1rem;
   right: 1rem;
+  position: fixed;
 }
 </style>

@@ -7,6 +7,8 @@ import Pages from "vite-plugin-pages";
 import Layouts from "vite-plugin-vue-layouts";
 import Components from "unplugin-vue-components/vite";
 import AutoImport from "unplugin-auto-import/vite";
+import VueI18n from "@intlify/vite-plugin-vue-i18n";
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -14,6 +16,18 @@ export default defineConfig({
     vueJsx(),
     Pages({
       extensions: ["vue", "md"],
+      exclude: ["**/components/**"],
+      dirs: [
+        {
+          dir: "src/pages",
+          baseRoute: "",
+        },
+      ],
+      extendRoute(route) {
+        if (route.path === "/") {
+          route.redirect("/home");
+        }
+      },
     }),
     Layouts({
       layoutsDirs: "src/layouts",
@@ -42,7 +56,15 @@ export default defineConfig({
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       dts: "src/components.d.ts",
     }),
+    VueI18n({
+      runtimeOnly: true,
+      compositionOnly: true,
+      include: [path.resolve(__dirname, "src/locales/**")],
+    }),
   ],
+  ssr: {
+    noExternal: ["vuetify", /vue-i18n/],
+  },
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),

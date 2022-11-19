@@ -4,21 +4,21 @@ This template should help get you started developing with Vuetify 3 in Vite usin
 
 ## Features
 
-*   Vuetify 3
-*   Vite
-*   Typescript
-*   Prettier
-*   Eslint
+* Vuetify 3
+* Vite
+* Typescript
+* Prettier
+* Eslint
 
-*   Vue Router
-*   Pinia
-*   Vue I18n
-*   [Layout system](https://github.com/JohnCampionJr/vite-plugin-vue-layouts)
-*   [File based routing](https://github.com/hannoeru/vite-plugin-pages)
+* Vue Router
+* Pinia
+* Vue I18n
+* [Layout system](https://github.com/JohnCampionJr/vite-plugin-vue-layouts)
+* [File based routing](https://github.com/hannoeru/vite-plugin-pages)
 
-## setup 
+## setup
 
-Clone this project using 
+Clone this project using
 
 ```bash
 git clone https://github.com/boussadjra/vuetify-3-template
@@ -48,7 +48,7 @@ npm run dev
 
 Build the project
 
-```bash 
+```bash
 npm run build
 
 ```
