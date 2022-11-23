@@ -23,11 +23,6 @@ export default defineConfig({
           baseRoute: "",
         },
       ],
-      extendRoute(route) {
-        if (route.path === "/") {
-          route.redirect("/home");
-        }
-      },
     }),
     Layouts({
       layoutsDirs: "src/layouts",
