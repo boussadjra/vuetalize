@@ -99,4 +99,8 @@
   z-index: 0;
   background-image: linear-gradient(-135deg, #7743db -50%, #181833 30%);
 }
+
+.v-theme--light .glow {
+  display: none;
+}
 </style>
