@@ -4,17 +4,19 @@ This template should help get you started developing with Vuetify 3 in Vite usin
 
 ## Features
 
-* Vuetify 3
-* Vite
-* Typescript
-* Prettier
-* Eslint
+-   Vuetify 3
+-   Vite
+-   Typescript
+-   Prettier
+-   Eslint
 
-* Vue Router
-* Pinia
-* Vue I18n
-* [Layout system](https://github.com/JohnCampionJr/vite-plugin-vue-layouts)
-* [File based routing](https://github.com/hannoeru/vite-plugin-pages)
+-   Vue Router
+-   Pinia
+-   Vue I18n
+-   [Layout system](https://github.com/JohnCampionJr/vite-plugin-vue-layouts)
+-   [File based routing](https://github.com/hannoeru/vite-plugin-pages)
+-   UnoCSS
+-   ApexChart
 
 ## setup
 
@@ -33,7 +35,7 @@ cd vuetify-3-template
 Install dependencies
 
 ```bash
-npm install
+yarn
 ```
 
 ## development
@@ -41,7 +43,7 @@ npm install
 Start the development server
 
 ```bash
-npm run dev
+yarn dev
 ```
 
 ## build
@@ -49,7 +51,7 @@ npm run dev
 Build the project
 
 ```bash
-npm run build
+yarn build
 
 ```
 
@@ -58,5 +60,5 @@ npm run build
 Lint the project
 
 ```bash
-npm run lint
+yarn lint
 ```

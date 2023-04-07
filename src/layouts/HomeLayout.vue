@@ -1,9 +1,8 @@
 <script setup lang="ts"></script>
 <template>
-  <div>
-    Home layout
-    <slot></slot>
-  </div>
+    <v-app>
+        <RouterView />
+    </v-app>
 </template>
 
 <style scoped></style>

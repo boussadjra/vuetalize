@@ -1,11 +1,19 @@
 @import './base.css';
-
-#app {
-  max-width: 100%;
-  margin: 0 auto;
-  /* padding: 2rem; */
-
-  /* font-weight: normal; */
+/** variable font face cairo */
+@font-face {
+    font-family: 'Cairo';
+    src: url('./fonts/Cairo.ttf') format('truetype');
+    font-weight: 0 1000;
 }
+#app {
+    max-width: 100%;
+    margin: 0 auto;
+    /* padding: 2rem; */
 
-
+    /* font-weight: normal; */
+}
+html[dir='rtl'] * {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Cairo', sans-serif;
+}

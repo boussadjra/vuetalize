@@ -1,26 +1,21 @@
 <script setup lang="ts">
-const theme = useTheme();
+import { useAppTheme } from '@/composables/useAppTheme'
 
-function toggleTheme() {
-  theme.global.name.value = theme.global.current.value.dark ? "light" : "dark";
-}
+const { isDark, onToggleTheme } = useAppTheme()
 
-const isDark = computed(() => theme.global.current.value.dark);
+defineProps({
+    color: {
+        type: String,
+        default: 'inherit',
+    },
+})
 </script>
 <template>
-  <div class="theme-toggler">
-    <v-btn
-      :icon="isDark ? 'mdi-white-balance-sunny' : 'mdi-weather-night'"
-      color="secondary"
-      @click="toggleTheme"
-    ></v-btn>
-  </div>
+    <div class="theme-toggler">
+        <v-btn icon :color="color" @click="onToggleTheme">
+            <span :class="isDark ? 'i-iconoir-sun-light' : 'i-iconoir-half-moon'" class="text-2xl"></span>
+        </v-btn>
+    </div>
 </template>
 
-<style scoped>
-.theme-toggler {
-  bottom: 1rem;
-  right: 1rem;
-  position: fixed;
-}
-</style>
+<style scoped></style>

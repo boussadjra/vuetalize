@@ -1,4 +1,35 @@
 hero:
-  title: "ابدأ مشروعك مع Vuetify 3 أسرع من أي وقت مضى"
-  subtitle: "هذا القالب مخصص ويأتي مع الكثير من الميزات خارج الصندوق. من المفترض أن تكون نقطة انطلاق لمشروعك."
-  getStarted: "ابدأ الآن"
+    title: ابدأ مشروعك مع Vuetify 3 أسرع من أي وقت مضى
+    subtitle: >-
+        هذا القالب مخصص ويأتي مع الكثير من الميزات خارج الصندوق. من المفترض أن تكون
+        نقطة انطلاق لمشروعك.
+    getStarted: ابدأ الآن
+    github: جيتهاب
+    dashboard: لوحة القيادة
+    features:
+        title: الميزات
+dashboard:
+    sidebar:
+        dashboard-overview: نظرة عامة على لوحة القيادة
+        rentals: الإيجارات
+        inventory: المخزون
+        customers: العملاء
+        reports: التقارير
+        settings: الإعدادات
+        help: المساعدة
+        logout: تسجيل الخروج
+    main:
+        dashboard-overview: نظرة عامة
+        total-rentals: |-
+
+            إجمالي الإيجارات
+        revenue: دخل
+        rating: معدل التقييمات
+        rentalFrequency: عدد مرات التأجير
+error:
+    pageNotFound: صفحة غير موجودة
+    pageNotFoundDescription: >-
+        قد تكون الصفحة التي تبحث عنها قد تمت إزالتها أو تغيير اسمها أو غير متوفرة
+        مؤقتًا.
+    backToHome: العودة إلى الصفحة الرئيسية
+    backToDashboard: العودة إلى لوحة القيادة

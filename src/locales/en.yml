@@ -1,4 +1,33 @@
 hero:
-  title: "Start your project with Vuetify 3 faster than ever"
-  subtitle: "This template is opinionated and comes with a lot of features out of the box. It is meant to be a starting point for your project."
-  getStarted: "Get Started"
+  title: Start your project with Vuetify 3 faster than ever
+  subtitle: >-
+    This template is opinionated and comes with a lot of features out of the
+    box. It is meant to be a starting point for your project.
+  getStarted: Get Started
+  github: Github
+  dashboard: Dashboard
+  features:
+    title: Features
+dashboard:
+  sidebar:
+    dashboard-overview: Dashboard overview
+    rentals: Rentals
+    inventory: Inventory
+    customers: Customers
+    reports: Reports
+    settings: Settings
+    help: Help
+    logout: Logout
+  main:
+    dashboard-overview: Overview
+    total-rentals: Total rentals
+    revenue: Revenue
+    rating: Average rating
+    rentalFrequency: Rental frequency
+error:
+  pageNotFound: Page not found
+  pageNotFoundDescription: >-
+    The page you are looking for might have been removed had its name changed or
+    is temporarily unavailable.
+  backToHome: Back to home
+  backToDashboard: Back to dashboard
