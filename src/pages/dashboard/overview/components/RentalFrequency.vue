@@ -61,10 +61,7 @@ const series = ref([
 ])
 </script>
 <template>
-    <ClientOnly>
-        <v-card :title="$t('dashboard.main.rentalFrequency')">
-            <VueApexCharts type="line" :options="options" :series="series"></VueApexCharts>
-        </v-card>
-        <template #placeholder> Frequency Chart </template>
-    </ClientOnly>
+    <v-card :title="$t('dashboard.main.rentalFrequency')">
+        <apexchart type="line" :options="options" :series="series"></apexchart>
+    </v-card>
 </template>
