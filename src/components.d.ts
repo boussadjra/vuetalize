@@ -9,16 +9,9 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    copy: typeof import("./components/blocks/Settings.vue")["default"]
     FeatureCard: typeof import('./pages/home/components/Features/FeatureCard.vue')['default']
     Features: typeof import('./pages/home/components/Features/index.vue')['default']
-    HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     Hero: typeof import('./pages/home/components/hero/Hero.vue')['default']
-    IconCommunity: typeof import('./components/icons/IconCommunity.vue')['default']
-    IconDocumentation: typeof import('./components/icons/IconDocumentation.vue')['default']
-    IconEcosystem: typeof import('./components/icons/IconEcosystem.vue')['default']
-    IconSupport: typeof import('./components/icons/IconSupport.vue')['default']
-    IconTooling: typeof import('./components/icons/IconTooling.vue')['default']
     LocaleToggler: typeof import('./components/blocks/LocaleToggler.vue')['default']
     Logo: typeof import('./components/blocks/Logo.vue')['default']
     RentalFrequency: typeof import('./pages/dashboard/overview/components/RentalFrequency.vue')['default']
@@ -27,8 +20,6 @@ declare module '@vue/runtime-core' {
     Settings: typeof import('./components/blocks/Settings.vue')['default']
     StatCardOverview: typeof import('./pages/dashboard/overview/components/StatCardOverview.vue')['default']
     ThemeToggler: typeof import('./components/blocks/ThemeToggler.vue')['default']
-    TheWelcome: typeof import('./components/TheWelcome.vue')['default']
     ToggleDirection: typeof import('./components/blocks/ToggleDirection.vue')['default']
-    WelcomeItem: typeof import('./components/WelcomeItem.vue')['default']
   }
 }

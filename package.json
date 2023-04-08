@@ -1,9 +1,10 @@
 {
   "name": "vuetify3-template",
   "version": "0.0.0-development",
+  "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite-ssg build",
+    "build": "vite-ssg build",
     "preview": "vite preview",
     "test:unit": "vitest --environment jsdom --root src/",
     "test:e2e": "start-server-and-test preview :4173 'cypress run --e2e'",

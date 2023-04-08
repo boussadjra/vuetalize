@@ -62,6 +62,7 @@ export default defineConfig({
         VueI18n({
             runtimeOnly: true,
             compositionOnly: true,
+            fullInstall: true,
             include: [path.resolve(__dirname, 'src/locales/**')],
         }),
         Unocss({
@@ -83,8 +84,15 @@ export default defineConfig({
         noExternal: ['vuetify', /vue-i18n/],
     },
     resolve: {
-        alias: {
-            '@': fileURLToPath(new URL('./src', import.meta.url)),
-        },
+        alias: [
+            {
+                find: '@',
+                replacement: fileURLToPath(new URL('./src', import.meta.url)),
+            },
+            {
+                find: 'vue-i18n',
+                replacement: 'vue-i18n/dist/vue-i18n.runtime.esm-bundler.js',
+            },
+        ],
     },
 })
