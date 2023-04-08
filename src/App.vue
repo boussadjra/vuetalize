@@ -4,7 +4,7 @@ useHead({
     meta: [{ name: 'description', content: 'Opinionated Vuetify Starter Template' }],
 })
 
-onInitApp()
+// onInitApp()
 </script>
 
 <template>
