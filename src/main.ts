@@ -3,7 +3,6 @@ import 'uno.css'
 
 import App from './App.vue'
 import { ViteSSG } from 'vite-ssg'
-// import VueApexCharts from 'vue3-apexcharts'
 import { createHead } from '@vueuse/head'
 import { createPinia } from 'pinia'
 import generatedRoutes from '~pages'
@@ -18,11 +17,7 @@ export const createApp = ViteSSG(App, { routes, base: import.meta.env.BASE_URL }
     app.use(vuetify)
     app.use(createHead())
     app.use(i18n)
-    if (isClient) {
-        import('vue3-apexcharts').then(({ default: VueApexCharts }) => {
-            app.use(VueApexCharts)
-        })
-    }
+
 })
 
 // const app = createApp({
