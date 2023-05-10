@@ -21,7 +21,7 @@
                         <v-btn
                             color="secondary"
                             variant="outlined"
-                            href="https://github.com/boussadjra/vuetify-3-template"
+                            href="https://github.com/boussadjra/vuetalize"
                             class="ml-8"
                             prepend-icon="mdi-github"
                             target="_blank"

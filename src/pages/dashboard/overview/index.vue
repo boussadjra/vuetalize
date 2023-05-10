@@ -1,15 +1,19 @@
-<script setup lang="ts">
-// import StatCardOverview from './components/StatCardOverview.vue'
-// import RentalFrequency from './components/RentalFrequency.vue'
-</script>
 <template>
     <div class="space-y-4">
         <StatCardOverview />
         <RentalFrequency />
+        <v-row>
+            <v-col sm="12" lg="7">
+                <CarsInfo />
+            </v-col>
+
+            <v-col sm="12" lg="5">
+                <RentalByType />
+            </v-col>
+        </v-row>
     </div>
 </template>
 
-<style scoped></style>
 <route lang="yaml">
 meta:
     layout: DashboardLayout

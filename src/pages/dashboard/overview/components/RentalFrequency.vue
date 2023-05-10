@@ -1,67 +1,58 @@
 <script setup lang="ts">
-const { global } = useTheme()
-const color = computed(() => (global.current.value.dark ? '#f1f1f1' : '#404040'))
-const options = computed(() => ({
-    chart: {
-        id: 'line-chart',
-        toolbar: {
-            show: false,
-        },
-    },
-    tooltip: {
-        theme: global.current.value.dark ? 'dark' : 'light',
-    },
-    grid: {
-        borderColor: global.current.value.dark ? '#404040' : '#f1f1f1',
-        strokeDashArray: 5,
-        xaxis: {
-            lines: {
-                show: true,
-            },
-        },
-        yaxis: {
-            lines: {
-                show: true,
-            },
-        },
-    },
-    xaxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-        axisBorder: {
-            color: color.value,
-        },
-        axisTicks: {
-            color: color.value,
-        },
-        labels: {
-            style: {
-                colors: color.value,
-            },
-        },
-    },
-    yaxis: {
-        axisBorder: {
-            color: color.value,
-        },
-        axisTicks: {
-            color: color.value,
-        },
-        labels: {
-            style: {
-                colors: color.value,
-            },
-        },
-    },
-}))
-const series = ref([
-    {
-        name: 'Rental Frequency',
-        data: [30, 40, 25, 50, 49, 60, 70, 91, 125, 35, 65, 80],
-    },
+import { use } from 'echarts/core'
+import { CanvasRenderer } from 'echarts/renderers'
+import { LineChart } from 'echarts/charts'
+import { TooltipComponent, LegendComponent } from 'echarts/components'
+
+import VChart, { THEME_KEY } from 'vue-echarts'
+import { ref, provide, computed } from 'vue'
+
+use([CanvasRenderer, LineChart, TooltipComponent, LegendComponent])
+
+const theme = useTheme()
+provide(THEME_KEY, theme.global.name.value)
+
+const data = ref([
+    { month: 'Jan', value: 40 },
+    { month: 'Feb', value: 20 },
+    { month: 'Mar', value: 36 },
+    { month: 'Apr', value: 50 },
+    { month: 'May', value: 70 },
+    { month: 'Jun', value: 52 },
+    { month: 'Jul', value: 57 },
+    { month: 'Aug', value: 54 },
+    { month: 'Sep', value: 82 },
+    { month: 'Oct', value: 58 },
+    { month: 'Nov', value: 63 },
+    { month: 'Dec', value: 29 },
 ])
+
+const option = computed(() => ({
+    xAxis: {
+        type: 'category',
+        data: data.value.map((item) => item.month),
+    },
+    yAxis: {
+        type: 'value',
+    },
+    series: [
+        {
+            data: data.value.map((item) => item.value),
+            type: 'line',
+            areaStyle: {
+                opacity: 0.2,
+            },
+        },
+    ],
+}))
 </script>
 <template>
     <v-card :title="$t('dashboard.main.rentalFrequency')">
-        <apexchart type="line" :options="options" :series="series"></apexchart>
+        <v-chart class="chart" :option="option" />
     </v-card>
 </template>
+<style scoped>
+.chart {
+    height: 400px;
+}
+</style>

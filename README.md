@@ -1,6 +1,6 @@
-# vuetify-3-template
+# Vuetalize
 
-This template should help get you started developing with Vuetify 3 in Vite using Typescript.
+This template aims to assist you in initiating your Vuetify 3 development journey within Vite, leveraging the power of Typescript.
 
 ## Features
 
@@ -16,20 +16,20 @@ This template should help get you started developing with Vuetify 3 in Vite usin
 -   [Layout system](https://github.com/JohnCampionJr/vite-plugin-vue-layouts)
 -   [File based routing](https://github.com/hannoeru/vite-plugin-pages)
 -   UnoCSS
--   ApexChart
+-   Vue Echarts
 
 ## setup
 
 Clone this project using
 
 ```bash
-git clone https://github.com/boussadjra/vuetify-3-template
+git clone https://github.com/boussadjra/vuetalize
 ```
 
 change directory to the project folder
 
 ```bash
-cd vuetify-3-template
+cd vuetalize
 ```
 
 Install dependencies

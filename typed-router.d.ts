@@ -39,6 +39,8 @@ declare module 'vue-router/auto/routes' {
     '/[...all]': RouteRecordInfo<'/[...all]', '/:all(.*)', { all: ParamValue<true> }, { all: ParamValue<false> }>,
     '/About': RouteRecordInfo<'/About', '/About', Record<never, never>, Record<never, never>>,
     '/dashboard/overview/': RouteRecordInfo<'/dashboard/overview/', '/dashboard/overview', Record<never, never>, Record<never, never>>,
+    '/dashboard/overview/components/CarsInfo': RouteRecordInfo<'/dashboard/overview/components/CarsInfo', '/dashboard/overview/components/CarsInfo', Record<never, never>, Record<never, never>>,
+    '/dashboard/overview/components/RentalByType': RouteRecordInfo<'/dashboard/overview/components/RentalByType', '/dashboard/overview/components/RentalByType', Record<never, never>, Record<never, never>>,
     '/dashboard/overview/components/RentalFrequency': RouteRecordInfo<'/dashboard/overview/components/RentalFrequency', '/dashboard/overview/components/RentalFrequency', Record<never, never>, Record<never, never>>,
     '/dashboard/overview/components/StatCardOverview': RouteRecordInfo<'/dashboard/overview/components/StatCardOverview', '/dashboard/overview/components/StatCardOverview', Record<never, never>, Record<never, never>>,
     '/dashboard/rentals/': RouteRecordInfo<'/dashboard/rentals/', '/dashboard/rentals', Record<never, never>, Record<never, never>>,

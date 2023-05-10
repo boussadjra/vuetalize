@@ -24,6 +24,7 @@ dashboard:
     revenue: Revenue
     rating: Average rating
     rentalFrequency: Rental frequency
+    carsInfo: Cars information
 error:
   pageNotFound: Page not found
   pageNotFoundDescription: >-

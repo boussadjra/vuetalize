@@ -50,19 +50,19 @@ const sidebarItems = computed(() => [
 ])
 </script>
 <template>
-    <v-app>
-        <v-layout>
-            <v-app-bar>
-                <div class="px-2 flex items-center">
+    <v-app full-height>
+        <v-layout full-height>
+            <v-app-bar class="!fixed">
+                <router-link to="/home" class="px-2 flex items-center">
                     <Logo :width="50" :height="40" />
-                </div>
+                </router-link>
 
                 <v-btn icon @click="drawer = !drawer">
                     <span class="i-iconoir-menu text-2xl"></span>
                 </v-btn>
 
                 <v-spacer></v-spacer>
-                <v-btn icon variant="text">
+                <v-btn icon variant="text" color="inherit">
                     <span class="i-iconoir-bell text-2xl"></span>
                 </v-btn>
                 <LocaleToggler />
@@ -71,8 +71,7 @@ const sidebarItems = computed(() => [
             <v-navigation-drawer
                 rounded
                 v-model="drawer"
-                absolute
-                class="m-2 max-h-[calc(100%-82px)]"
+                class="m-2 max-h-[calc(100%-82px)] !fixed"
                 :rail="rail"
                 :location="isRTL ? 'end' : 'start'"
             >
@@ -89,10 +88,10 @@ const sidebarItems = computed(() => [
 
                 <v-list density="compact" nav>
                     <v-list-item
-                        height="80"
-                        prepend-avatar="https://avatars.githubusercontent.com/u/11801238?v=4"
-                        title="Brahim Boussadjra"
-                        subtitle="brahim732@gmail.com"
+                        height="100"
+                        prepend-avatar="https://ui-avatars.com/api/?name=John+Doe&background=0D8ABC&color=fff"
+                        title="John Doe"
+                        subtitle="john.doe732@mail.com"
                         class="me-4"
                     ></v-list-item>
 

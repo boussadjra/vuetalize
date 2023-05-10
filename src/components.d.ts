@@ -9,11 +9,14 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    CarsInfo: typeof import('./pages/dashboard/overview/components/CarsInfo.vue')['default']
+    copy: typeof import('./pages/dashboard/overview/components/RentalFrequency copy.vue')['default']
     FeatureCard: typeof import('./pages/home/components/Features/FeatureCard.vue')['default']
     Features: typeof import('./pages/home/components/Features/index.vue')['default']
     Hero: typeof import('./pages/home/components/hero/Hero.vue')['default']
     LocaleToggler: typeof import('./components/blocks/LocaleToggler.vue')['default']
     Logo: typeof import('./components/blocks/Logo.vue')['default']
+    RentalByType: typeof import('./pages/dashboard/overview/components/RentalByType.vue')['default']
     RentalFrequency: typeof import('./pages/dashboard/overview/components/RentalFrequency.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
