@@ -1,7 +1,6 @@
 <script setup lang="ts">
 const { t, locale } = useI18n()
 const drawer = ref(true)
-const activeItem = ref('dashboard-overview')
 const rail = ref(false)
 const isRTL = computed(() => locale.value === 'ar')
 const sidebarItems = computed(() => [
@@ -52,7 +51,7 @@ const sidebarItems = computed(() => [
 <template>
     <v-app full-height>
         <v-layout full-height>
-            <v-app-bar class="!fixed">
+            <v-app-bar class="">
                 <router-link to="/home" class="px-2 flex items-center">
                     <Logo :width="50" :height="40" />
                 </router-link>
@@ -96,19 +95,12 @@ const sidebarItems = computed(() => [
                     ></v-list-item>
 
                     <v-divider></v-divider>
-                    <v-list-item-group v-model="activeItem">
-                        <v-list-item
-                            v-for="item in sidebarItems"
-                            :key="item.value"
-                            :title="item.title"
-                            :value="item.value"
-                            :to="item.path"
-                        >
-                            <template v-slot:prepend>
-                                <span :class="item.iconClass"></span>
-                            </template>
-                        </v-list-item>
-                    </v-list-item-group>
+                    <v-list-item v-for="item in sidebarItems" :key="item.value" :value="item.value" :to="item.path">
+                        <template v-slot:prepend>
+                            <span :class="item.iconClass"></span>
+                        </template>
+                        <v-list-item-title v-text="item.title"></v-list-item-title>
+                    </v-list-item>
                 </v-list>
                 <template v-slot:append>
                     <div class="pa-2">

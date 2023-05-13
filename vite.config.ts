@@ -5,7 +5,6 @@ import Components from 'unplugin-vue-components/vite'
 import Layouts from 'vite-plugin-vue-layouts'
 import Pages from 'vite-plugin-pages'
 import Unocss from 'unocss/vite'
-import UnocssIcons from '@unocss/preset-icons'
 import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import VueRouter from 'unplugin-vue-router/vite'
 import { defineConfig } from 'vite'
@@ -66,18 +65,8 @@ export default defineConfig({
             include: [path.resolve(__dirname, 'src/locales/**')],
         }),
         Unocss({
-            // when `presets` is specified, the default preset will be disabled
-            // so you could only use the pure CSS icons in addition to your
-            // existing app without polluting other CSS
-            presets: [
-                UnocssIcons({
-                    // options
-                    prefix: 'i-',
-                    extraProperties: {
-                        display: 'inline-block',
-                    },
-                }),
-            ],
+
+
         }),
     ],
     ssr: {

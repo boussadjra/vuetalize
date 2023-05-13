@@ -10,7 +10,6 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     CarsInfo: typeof import('./pages/dashboard/overview/components/CarsInfo.vue')['default']
-    copy: typeof import('./pages/dashboard/overview/components/RentalFrequency copy.vue')['default']
     FeatureCard: typeof import('./pages/home/components/Features/FeatureCard.vue')['default']
     Features: typeof import('./pages/home/components/Features/index.vue')['default']
     Hero: typeof import('./pages/home/components/hero/Hero.vue')['default']
