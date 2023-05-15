@@ -94,6 +94,10 @@ html[dir='rtl'] .tagline {
     background-image: linear-gradient(135deg, #7743db -50%, #181833 30%);
 }
 
+.v-theme--light .glow {
+    background-image: linear-gradient(135deg, #7743db -50%, #efefef 30%);
+}
+
 .glow-right {
     right: 0;
     left: unset;
@@ -101,7 +105,7 @@ html[dir='rtl'] .tagline {
     background-image: linear-gradient(-135deg, #7743db -50%, #181833 30%);
 }
 
-.v-theme--light .glow {
-    display: none;
+.v-theme--light .glow-right {
+    background-image: linear-gradient(-135deg, #7743db -50%, #efefef 30%);
 }
 </style>

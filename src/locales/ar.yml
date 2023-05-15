@@ -27,6 +27,11 @@ dashboard:
     rating: معدل التقييمات
     rentalFrequency: عدد مرات التأجير
     carsInfo: معلومات السيارات
+    carModel: طراز السيارة
+    carType: نوع السيارة
+    rentalCost: تكلفة الإيجار
+    rentalDuration: مدة الإيجار
+    mileage: عدد الأميال
 error:
   pageNotFound: صفحة غير موجودة
   pageNotFoundDescription: >-

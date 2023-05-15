@@ -1,18 +1,5 @@
 <script setup lang="ts">
-import { use } from 'echarts/core'
-import { CanvasRenderer } from 'echarts/renderers'
-import { PieChart } from 'echarts/charts'
-import { GridComponent, TooltipComponent, LegendComponent } from 'echarts/components'
-
-import VChart, { THEME_KEY } from 'vue-echarts'
-import { provide, computed } from 'vue'
-
-use([CanvasRenderer, PieChart, GridComponent, TooltipComponent, LegendComponent])
-
-const theme = useTheme()
-provide(THEME_KEY, theme.global.name.value)
-
-const option = computed(() => ({
+const option = ref({
     tooltip: {
         trigger: 'item',
         formatter: '{a} <br/>{b}: {c} ({d}%)',
@@ -52,16 +39,10 @@ const option = computed(() => ({
             ],
         },
     ],
-}))
+})
 </script>
 <template>
     <v-card :title="$t('dashboard.main.rentalFrequency')">
-        <v-chart class="chart" :option="option" />
+        <PieChart :option="option" />
     </v-card>
 </template>
-<style scoped>
-.chart {
-    height: 420px;
-    width: 100%;
-}
-</style>

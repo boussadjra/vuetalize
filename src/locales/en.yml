@@ -25,6 +25,11 @@ dashboard:
     rating: Average rating
     rentalFrequency: Rental frequency
     carsInfo: Cars information
+    carModel: Car Model
+    carType: Car Type
+    rentalCost: Rental Cost
+    rentalDuration: Rental Duration
+    mileage: Mileage
 error:
   pageNotFound: Page not found
   pageNotFoundDescription: >-

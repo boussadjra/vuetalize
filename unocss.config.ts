@@ -17,8 +17,13 @@ export default defineConfig({
         presetUno(),
         presetAttributify(),
         presetIcons({
-            scale: 1.2,
+            scale: 1,
             warn: true,
+            prefix: 'i-',
+            extraProperties: {
+                display: 'inline-block',
+            },
+
         }),
         presetTypography(),
         presetWebFonts(),

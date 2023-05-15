@@ -9,13 +9,13 @@ This template aims to assist you in initiating your Vuetify 3 development journe
 -   Typescript
 -   Prettier
 -   Eslint
-
--   Vue Router
 -   Pinia
 -   Vue I18n
 -   [Layout system](https://github.com/JohnCampionJr/vite-plugin-vue-layouts)
+-   Vue Router
 -   [File based routing](https://github.com/hannoeru/vite-plugin-pages)
 -   UnoCSS
+-   Iconoir Icons (powered by UnoCSS)
 -   Vue Echarts
 
 ## setup
