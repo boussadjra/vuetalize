@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 <template>
     <div>
-        <h1>Dashboard customers (TODO)</h1>
+        <h1>Dashboard Settings (TODO)</h1>
     </div>
 </template>
 

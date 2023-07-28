@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 <template>
     <div>
-        <h1>Dashboard Rentals (TODO)</h1>
+        <h1>Dashboard Reports (TODO)</h1>
     </div>
 </template>
 
