@@ -14,8 +14,10 @@ export function useAppI18n() {
     function changeDirection() {
         if (locale.value === 'ar') {
             document.querySelector('html')?.setAttribute('dir', 'rtl')
+            document.querySelector('html')?.setAttribute('lang', 'ar')
         } else {
             document.querySelector('html')?.setAttribute('dir', 'ltr')
+            document.querySelector('html')?.setAttribute('lang', 'en')
         }
     }
 

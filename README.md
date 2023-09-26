@@ -34,7 +34,7 @@ cd vuetalize
 Install dependencies
 
 ```bash
-yarn
+pnpm
 ```
 
 ## development
@@ -42,7 +42,7 @@ yarn
 Start the development server
 
 ```bash
-yarn dev
+pnpm dev
 ```
 
 ## build
@@ -50,7 +50,7 @@ yarn dev
 Build the project
 
 ```bash
-yarn build
+pnpm build
 
 ```
 
@@ -59,5 +59,5 @@ yarn build
 Lint the project
 
 ```bash
-yarn lint
+pnpm lint
 ```

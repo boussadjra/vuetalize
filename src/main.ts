@@ -13,7 +13,6 @@ import vuetify from './plugins/vuetify'
 
 const routes = setupLayouts(generatedRoutes)
 
-
 const app = createApp({
     render: () => h(App),
     setup() {
@@ -29,6 +28,6 @@ app.use(createPinia())
         createRouter({
             history: createWebHistory(import.meta.env.BASE_URL),
             routes,
-        })
+        }),
     )
 app.mount('#app')

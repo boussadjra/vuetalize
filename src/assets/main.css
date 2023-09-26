@@ -1,19 +1,46 @@
-@import './base.css';
-/** variable font face cairo */
-@font-face {
+/* @font-face {
     font-family: 'Cairo';
     src: url('./fonts/Cairo.ttf') format('truetype');
     font-weight: 0 1000;
 }
+@font-face {
+    font-family: 'Silka';
+    src: url('./fonts/silka-regular-webfont.ttf') format('truetype-variations');
+}
+
+@font-face {
+    font-family: 'Silka';
+    src: url('./fonts/silka-regularitalic-webfont.ttf') format('truetype-variations');
+    font-style: italic;
+} */
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('./fonts/Rubik-VariableFont_wght.ttf') format('truetype-variations');
+    font-weight: 0 1000;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('./fonts/Rubik-Italic-VariableFont_wght.ttf') format('truetype-variations');
+    font-weight: 0 1000;
+    font-style: italic;
+}
+
+html {
+    font-family: 'Rubik', sans-serif !important;
+}
+
+html[dir='rtl'] * {
+    direction: rtl;
+    text-align: right;
+    /* font-family: 'Cairo', sans-serif; */
+}
+
 #app {
     max-width: 100%;
     margin: 0 auto;
     /* padding: 2rem; */
 
     /* font-weight: normal; */
-}
-html[dir='rtl'] * {
-    direction: rtl;
-    text-align: right;
-    font-family: 'Cairo', sans-serif;
 }

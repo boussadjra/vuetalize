@@ -25,9 +25,14 @@ const option = computed(() => ({
     series: [
         {
             data: data.value.map((item) => item.value),
-            type: 'line',
+            type: 'bar',
+
             areaStyle: {
                 opacity: 0.2,
+            },
+
+            itemStyle: {
+                color: '#0098ff',
             },
         },
     ],
@@ -35,7 +40,7 @@ const option = computed(() => ({
 </script>
 <template>
     <v-card :title="$t('dashboard.main.rentalFrequency')">
-        <LineChart :option="option" />
+        <BarChart :option="option" />
     </v-card>
 </template>
 <style scoped>

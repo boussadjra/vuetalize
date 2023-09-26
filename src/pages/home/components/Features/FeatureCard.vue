@@ -40,7 +40,7 @@ defineProps({
 
 <style scoped>
 .gradient-border {
-    background: linear-gradient(90deg, #7743db 0%, #ef476f 30%);
+    background: linear-gradient(90deg, #008ad1 0%, #f39f0d 30%);
     background-size: 600% 600%;
     border-radius: 8px;
     height: calc(100% + 2px);

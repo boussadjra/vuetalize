@@ -64,10 +64,7 @@ export default defineConfig({
             fullInstall: true,
             include: [path.resolve(__dirname, 'src/locales/**')],
         }),
-        Unocss({
-
-
-        }),
+        Unocss({}),
     ],
     ssr: {
         noExternal: ['vuetify', /vue-i18n/],

@@ -52,7 +52,7 @@ const sidebarItems = computed(() => [
     <v-app full-height>
         <v-layout full-height>
             <v-app-bar class="!fixed">
-                <router-link to="/home" class="px-2 flex items-center">
+                <router-link to="/home" class="px-8 flex items-center w-64">
                     <Logo :width="50" :height="40" />
                 </router-link>
 
